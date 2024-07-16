@@ -10,7 +10,7 @@ h1 {
 }
 
 .header {
-  background-image: blackboard.jpg;
+  background-image: url(blackboard.jpg);
   text-align: center;
   color: white;
   padding: 20px;
