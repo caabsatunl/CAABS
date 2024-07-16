@@ -37,15 +37,15 @@ h3 {
 hr {
     display: block;
     border-style:inset;
-    border-color:#b30000;
-    background-color:#b30000;
+    border-color:#000000;
+    background-color:#000000;
     height: 2px;
     border: 0;
 }
 
 .topnav {
   overflow: hidden;
-  background-color: #b30000;
+  background-color: #000000;
 }
 
 .topnav a {
@@ -59,7 +59,7 @@ hr {
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #d00000;
+  background-color: #000000;
   color: white;
 }
 
