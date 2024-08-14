@@ -88,6 +88,7 @@ ul li::before {
   margin-bottom: 45px;
   border-style: solid;
   border-color: #272727;
+  color:white;
 }
 
 .tcard {
@@ -97,6 +98,7 @@ ul li::before {
   margin-bottom: 35px;
   border-style: solid;
   border-color: #d00000;
+ 
 }
 
 /* Footer */
