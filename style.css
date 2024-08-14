@@ -26,13 +26,14 @@ h2 {
   margin-right: 0;
   font-weight: normal;
   font-decoration: underline;
+  color: white;
 }
 
 h3 {
   font-size: 17px;
   margin-bottom: 5px;
   margin-top: 5px;
-text-color: white;
+  color: white;
 }
 
 hr {
@@ -80,6 +81,7 @@ ul li::before {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  color: white;
 }
 
 .card {
@@ -89,7 +91,7 @@ ul li::before {
   margin-bottom: 45px;
   border-style: solid;
   border-color: #272727;
-  text-color: white;
+  color: white;
 }
 
 .tcard {
