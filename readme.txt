@@ -1,1 +1,1 @@
-The style.css was taken from the CARS Website at UNL.
+The style.css was modified from the one found in the CARS Website at UNL.
