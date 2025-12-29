@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	  <meta charset="utf-8">
+    <script>
+      function includeHTMLSnippet() {
+        id = document.getElementsByTagName("*");
+        for (i = 0; i < id.length; i++) {
+          element = id[i];
+          file = element.getAttribute(
+            "include-html-snippet");
+          if (file) {
+            xmlRequest = new XMLHttpRequest();
+            xmlRequest.onreadystatechange = function () {
+              if (this.readyState == 4) {
+                if (this.status == 200) {
+                  element.innerHTML = this.responseText;
+                }
+                if (this.status == 404) {
+                  element.innerHTML = "Page not found.";
+                }
+                element.removeAttribute(
+                  "include-html-snippet");
+                includeHTMLSnippet();
+              }
+            }
+            xmlRequest.open("GET", file, true);
+            xmlRequest.send();
+            return;
+          }
+        }
+      };
+    </script>
+    <title> CAAB </title>
+</head>
+
+
+<body style="background-color: grey">
+<div class="header">
+  <img style="position:absolute;right:43px;top:63px;widht:90px;height:90px;" src="logo.svg" alt="UNL logo">
+  <h1>CAABS</h1>
+</div>
+<div class="topnav">
+  <a style="cursor:default; background-color:#000000;cursor:default;" href="index.html">Home</a>
+  <a href="current.html">Current Semester</a>
+  <div class="dropdown">
+    <button class="dropbtn">Past Semesters
+    </button>
+  <div include-html-snippet="dropdown-content.html"></div>
+  </div>
+
+</div>
+
+
+
+
+<div class="card">
+  <h2>Info</h2>
+  <hr>
+	<p>
+This semester's text will be <i>Classical Invariant Theory a Primer</i> by Kraft and Procesi. Additionally, we will meet weekly on Tuesdays from 3:00-4:00PM in Burnett Hall 205.
+	</p>
+	
+</div>
+
+
+
+<div class="card">
+  <h2>Reading Assignments</h2>
+  <hr>
+
+  <div id="DivContent"></div>
+
+<ul>
+	
+	<li> Reading assignement for September 3rd: Sections 1.1, 1.2, and 1.3 of the text. You are encouraged to work on the exercises while reading. We will also work on some of these exercises in groups during the meeting. </li>
+	<br>
+	<li> Reading assignement for September 10th: Sections 1.4, 1.5, and 1.6 of the text. You are encouraged to work on the exercises while reading. We will also work on some of these exercises in groups during the meeting. </li>
+	<br>
+	<li> Reading assignement for Septermber 17th: Catch up! If you are fully caught up, feel free to work on the exercise sheets or read on! We will still meet on this day.</li>
+	<br>
+	<li> Reading assignement for Septermber 24th: Problem Presentations </li>
+	<br>
+	<li> Reading assignement for October 1st: Read 2.1-2.3 in text. </li>
+	<br>
+	<li> Reading assignement for October 8th: Read 2.4-2.5 and 3.1 in text <b>No meeting this week.</b> </li>
+	<br>
+	<li> Reading assignement for October 15th: Problem Presentations. </li>
+	<br>
+	<li> Reading assignment for October 22nd: None! Fall Break. </li>
+	<br>
+	<li> Reading assignement for October 29th:  Read 3.2-3.3 in text. </li>
+	<br>
+	<li> Reading assignment for November 4th: Catch-up and work on <a href="CAABS_Fall_2024-15.pdf"> Group Rings and the Artin-Wedderburn Theorem Worksheet</a>.</li>
+	<br>
+	<li> Reading assignment for November 11th: Catch-up and <a href="CAABS_Fall_2024-24.pdf"> Some Foundations of Representation Theory Worksheet</a>.
+	
+	<p> <b>Did not meet this week.</b> </p>
+	</li>
+	<br>
+	<li> Reading assignment for November 18th: Read the proof the the Double Centralizer Theorem.</li>
+	<br>
+	<li> Reading assignment for November 25th: Work on  <a href="CAABS_Fall_2024-23.pdf"> The Double Centralizer Theorem Worksheet </a> and previous exercise sheets.</li>
+</ul>
+</div>
+
+</div>
+
+	<div class="card">
+  <h2>Exercise Sheets</h2>
+  <hr>
+
+  <div id="DivContent"></div>
+
+<ul>
+	
+	<li> <a href="CAABS_Fall_2024-3.pdf"> Exercise Sheet 1</a></li>
+	<li> <a href="CAABS_Fall_2024.pdf"> Exercise Sheet 2</a></li>
+	<li> <a href="CAABS_Fall_2024-12.pdf"> Exercise Sheet 3</a></li>
+	<li> <a href="CAABS_Fall_2024-18.pdf"> Exercise Sheet 4</a></li>
+	<li> <a href="CAABS_Fall_2024-15.pdf"> Group Rings and the Artin-Wedderburn Theorem Worksheet</a> </li>
+	<li> <a href="CAABS_Fall_2024-24.pdf"> Some Foundations of Representation Theory Worksheet</a> </li>
+	<li> <a href="CAABS_Fall_2024-23.pdf"> The Double Centralizer Theorem Worksheet </a> </li>
+	<br>
+	
+
+</ul>
+</div>
+
+</div>
+
+
+<script>
+  includeHTMLSnippet();
+</script>
+
+</body>
+</html>
